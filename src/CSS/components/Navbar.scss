@@ -1,0 +1,26 @@
+@import "../variables.scss";
+#nav {
+    position: fixed;
+    width: 100%;
+    background: $light-black;
+    z-index: 100;
+    .nav-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 90%;
+        margin: 0 auto;
+        min-height: 10vh;
+        .nav-icon {
+            color: $darker-white;
+            cursor: pointer;
+        }
+        h4 {
+            color: $darker-white;
+            cursor: pointer;
+            
+        }
+        
+        
+    }
+}

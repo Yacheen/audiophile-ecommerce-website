@@ -1,0 +1,64 @@
+.home {
+    display: flex;
+    flex-direction: column;
+    .home-hero {
+        min-height: 60rem;
+        background: url("../../assets/home/mobile/image-header.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        color: $darker-white;
+        
+        
+        .home-hero-content {
+            padding-top: 30vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 80%;
+            margin: 0 auto;
+            > * {
+                margin-bottom: 2rem;
+                text-align: center;
+            }
+            
+            .new-product {
+                opacity: 0.8;
+                font-weight: 100;
+                
+            }
+            h2 {
+                line-height: 4rem;
+            }
+            .home-hero-description {
+                line-height: 2rem;
+                font-size: 1.4rem;
+                font-weight: 100;
+                max-width: 80%;
+            }
+            button {
+                padding: 1.2rem;
+                background: $brown;
+                transition: all ease 0.3s;
+                border: none;
+                color: $darker-white;
+                font-weight: 500;
+                font-size: 1.3rem;
+                letter-spacing: 0.1rem;
+                cursor: pointer;
+
+                &:hover {
+                    background: $light-brown;
+                }
+            }
+        }
+    }
+    .home-content {
+        max-width: 90%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 6rem 0;
+
+    }
+}
