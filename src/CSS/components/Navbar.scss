@@ -1,16 +1,19 @@
 @import "../variables.scss";
 #nav {
-    position: fixed;
+    position: sticky;
     width: 100%;
     background: $light-black;
     z-index: 100;
     .nav-content {
+        
         display: flex;
         justify-content: space-between;
         align-items: center;
         max-width: 90%;
         margin: 0 auto;
         min-height: 10vh;
+        
+        
         .nav-icon {
             color: $darker-white;
             cursor: pointer;
@@ -23,4 +26,12 @@
         
         
     }
+}
+.navigation-links {
+    position: absolute;
+    width: 100%;
+    top: 10vh;
+    background: white;
+    padding: 6rem 2rem;
+    
 }

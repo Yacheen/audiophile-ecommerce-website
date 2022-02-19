@@ -1,11 +1,15 @@
 import React from 'react'
+import FacebookIcon from '@mui/icons-material/Facebook';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import TwitterIcon from '@mui/icons-material/Twitter';
 
 export default function Footer() {
   return (
     <footer id="footer">
       <div className="footer-content">
+      
         <div className="footer-buttons">
-          <h5>audiophile</h5>
+        <h5>audiophile</h5>
           <p>HOME</p>
           <p>HEADPHONES</p>
           <p>SPEAKERS</p>
@@ -17,7 +21,11 @@ export default function Footer() {
             and sound specialists who are devoted to helping you get the most out of personal audio. Come and
             visit our demo facility - we’re open 7 days a week.
           </p>
-          <div>social media links</div>
+          <div className="footer-socials">
+            <FacebookIcon style={{fontSize: 36}} />
+            <TwitterIcon style={{fontSize: 36}} />
+            <InstagramIcon style={{fontSize: 36}} />
+          </div>
         </div>
       
         Copyright 2021. All Rights Reserved

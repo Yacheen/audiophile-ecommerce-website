@@ -1,0 +1,15 @@
+.category-banner {
+    background: $black;
+    
+    .category-banner-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: calc(19.2rem / 2);
+        h5 {
+            color: $dark-white;
+            font-weight: 400;
+            letter-spacing: 0.2rem;
+        }
+    }
+}
