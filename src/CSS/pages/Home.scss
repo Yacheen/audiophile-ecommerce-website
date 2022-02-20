@@ -74,9 +74,12 @@
                 background: $brown;
                 margin-bottom: 2.4rem;
                 border-radius: 0.6rem;
+                overflow: hidden;
                 .zx9-background-pattern {
                     position: absolute;
                     bottom: 22%;
+                    right: 40%;
+                    width: 100%;
                     img {
                         max-width: 60rem;
                     }
@@ -149,10 +152,11 @@
                 .yx1-description {
                     border-radius: 0.6rem;
                     background: $darker-white;
+                    overflow-x: hidden;
                     .yx1-content {
                         position: relative;
-                        left: 10%;
                         min-height: 20rem;
+                        left: 10%;
                         display: flex;
                         flex-direction: column;
                         justify-content: space-evenly;

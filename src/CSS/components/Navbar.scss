@@ -3,17 +3,15 @@
     position: sticky;
     width: 100%;
     background: $light-black;
-    z-index: 100;
+    z-index: 105;
+    top: 0;
     .nav-content {
-        
         display: flex;
         justify-content: space-between;
         align-items: center;
         max-width: 90%;
         margin: 0 auto;
         min-height: 10vh;
-        
-        
         .nav-icon {
             color: $darker-white;
             cursor: pointer;
@@ -21,17 +19,34 @@
         h4 {
             color: $darker-white;
             cursor: pointer;
-            
-        }
-        
-        
+        } 
+    }
+}
+
+.navigation-background {
+    position: fixed;
+    z-index: 101;
+    height: 100%;
+    width: 100%;
+    
+    
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
     }
 }
 .navigation-links {
-    position: absolute;
+    z-index: 102;
+    position: fixed;
     width: 100%;
     top: 10vh;
     background: white;
-    padding: 6rem 2rem;
-    
+    padding: 6rem 2rem 0rem 2rem;
 }
