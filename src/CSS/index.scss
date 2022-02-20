@@ -37,6 +37,17 @@ a {
 //buttons
 .brown-button {
     background: $brown;
+    border: none;
+    width: 16rem;
+    height: 4.8rem;
+    margin: 0 auto;
+    color: $darker-white;
+    cursor: pointer;
+    transition: all ease 0.2s;
+    letter-spacing: 0.2rem;
+    &:hover {
+        background: $light-brown;
+    }
 }
 .black-button {
     background: $black;
@@ -77,3 +88,5 @@ a {
 @import "./components/footer.scss";
 @import "./components/aboutAudiophile.scss";
 @import "./components//categoryBanner.scss";
+@import "./components/product.scss";
+@import "./pages/Headphones.scss";
