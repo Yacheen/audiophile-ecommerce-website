@@ -8,7 +8,6 @@ export default function Item({picture, isNewItem, name, description}) {
         <h4>{name}</h4>
         <p className="product-description">{description}</p>
         <button className="brown-button">SEE PRODUCT</button> 
-       
     </div>
   )
 }

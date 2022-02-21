@@ -21,7 +21,7 @@ export default function Products({setNavDisplay}) {
 
         <a href="/speakers" className="product" onClick={() =>setNavDisplay(false)}>
             <img src={speakers} alt="" />
-                <p>HEADPHONES</p>
+                <p>SPEAKERS</p>
                 <div className="product-shop-now">
                     <span>SHOP</span> <ArrowForwardIosIcon className="arrow-icon" />
             </div>
@@ -29,7 +29,7 @@ export default function Products({setNavDisplay}) {
 
         <a href="/earphones" className="product" onClick={() =>setNavDisplay(false)}>
             <img src={earphones} alt="" />
-                <p>HEADPHONES</p>
+                <p>EARPHONES</p>
                 <div className="product-shop-now">
                     <span>SHOP</span> <ArrowForwardIosIcon className="arrow-icon" />
             </div>

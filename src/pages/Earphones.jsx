@@ -1,35 +1,30 @@
 import React from 'react'
+import CategoryBanner from '../components/CategoryBanner'
+import Products from '../components/Products';
+import AboutAudiophile from '../components/AboutAudiophile';
+import Footer from '../components/Footer';
+import yx1earphones from "../assets/product-yx1-earphones/mobile/image-product.jpg";
+import Item from "../components/Item";
 
 export default function Earphones() {
   return (
-    <div>
-         New product
+    <>
+    <CategoryBanner category={"EARPHONES"}/>
+      <section className="items">
+        <div className="items-content">
+        <Item
+              description={"Tailor your listening experience with bespoke dynamic drivers from the new YX1 Wireless Earphones. Enjoy incredible high-fidelity sound even in noisy environments with its active noise cancellation feature."}
+              isNewProduct={true}
+              name={"YX1 wireless earphones"}
+              picture={yx1earphones}
+        />
 
-YX1 wireless earphones
-Tailor your listening experience with bespoke dynamic drivers from the new YX1 Wireless Earphones. 
-Enjoy incredible high-fidelity sound even in noisy environments with its active noise cancellation feature.
-
-See product
-
-
-Headphones
-Shop
-
-Speakers
-Shop
-
-Earphones
-Shop
-
-Bringing you the best audio gear
-Located at the heart of New York City, Audiophile is the premier store for high end headphones,
-earphones, speakers, and audio accessories. We have a large showroom and luxury demonstration
-rooms available for you to browse and experience a wide range of our products. Stop by our store
-to meet some of the fantastic people who make Audiophile the best place to buy your portable
-audio equipment.
-
-
-    </div>
+        </div>
+        <Products />
+        <AboutAudiophile />
+      </section>
+      <Footer />
+    </>
   )
 }
 

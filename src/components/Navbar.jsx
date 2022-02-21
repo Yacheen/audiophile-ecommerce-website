@@ -3,6 +3,8 @@ import React, {useState} from "react";
 import {BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
 import Home from "../pages/Home";
 import Headphones from "../pages/Headphones";
+import Speakers from "../pages/Speakers";
+import Earphones from "../pages/Earphones";
 //material ui 
 import MenuIcon from '@mui/icons-material/Menu';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
@@ -50,6 +52,8 @@ export default function Navbar() {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/headphones" element={<Headphones />} />
+                <Route path="/speakers" element={<Speakers />} />
+                <Route path="/earphones" element={<Earphones />} />
             </Routes>
         </Router>
     )

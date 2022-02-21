@@ -1,11 +1,11 @@
-.headphones {
+.items {
     display: flex;
     flex-direction: column;
     align-items: center;
     max-width: 90%;
     margin: 0 auto;
     padding: 6rem 0;
-    .headphones-content {
+    .items-content {
         margin-bottom: 8rem;
     }
 }

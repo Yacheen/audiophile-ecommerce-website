@@ -12,9 +12,9 @@ export default function Headphones() {
   return (
     <>
       <CategoryBanner category={"HEADPHONES"}/>
-        <section className="headphones">
+        <section className="items">
           
-          <div className="headphones-content">
+          <div className="items-content">
             {/*x99mark2*/}
             <Item
               description={"The new XX99 Mark II headphones is the pinnacle of pristine audio. It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound."}
