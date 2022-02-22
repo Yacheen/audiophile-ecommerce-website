@@ -11,19 +11,26 @@ export default function Reccommendations({
   return (
     <section className="reccommendations">
       <div className="reccommendation">
-        <img src={image1} alt=""></img>
+        <div className="image-background">
+          <img src={image1} alt=""></img>=
+        </div>
+
         <h4>{name1}</h4>
         <button className="brown-button">SEE PRODUCT</button>
       </div>
 
       <div className="reccommendation">
-        <img src={image2} alt=""></img>
+        <div className="image-background">
+          <img src={image2} alt=""></img>
+        </div>
         <h4>{name2}</h4>
         <button className="brown-button">SEE PRODUCT</button>
       </div>
 
       <div className="reccommendation">
-        <img src={image3} alt=""></img>
+        <div className="image-background">
+          <img src={image3} alt=""></img>
+        </div>
         <h4>{name3}</h4>
         <button className="brown-button">SEE PRODUCT</button>
       </div>

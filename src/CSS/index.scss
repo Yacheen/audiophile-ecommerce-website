@@ -81,6 +81,14 @@ a {
 
 }
 
+.page-container {
+    max-width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6rem 0;
+}
 
 @import "./components/Navbar.scss";
 @import "./pages/Home.scss";
@@ -90,3 +98,5 @@ a {
 @import "./components//categoryBanner.scss";
 @import "./components/product.scss";
 @import "./pages/Headphones.scss";
+@import "./components/purchaseItem.scss";
+@import "./components/reccommendations.scss";

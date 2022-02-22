@@ -1,0 +1,23 @@
+.reccommendations {
+    margin-bottom: 4rem;
+    width: 100%;
+    .reccommendation {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;     
+        text-align: center;  
+        margin-bottom: 4rem;
+        > * {
+            margin-bottom: 2rem;
+        }
+        .image-background {
+            width: 100%;
+            background: $darker-white;
+            border-radius: 1.6rem;
+            img {
+                max-width: 40%;
+            }
+        }
+    }
+}

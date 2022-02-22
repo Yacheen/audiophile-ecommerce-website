@@ -10,7 +10,14 @@ import MenuIcon from '@mui/icons-material/Menu';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import CloseIcon from '@mui/icons-material/Close';
 import Products from "./Products";
+import XX59Headphones from "../pages/product-detail-pages/XX59Headphones";
+import XX99Mark1Headphones from "../pages/product-detail-pages/XX99Mark1Headphones";
+import XX99Mark2Headphones from "../pages/product-detail-pages/XX99Mark2Headphones";
 
+import ZX9Speaker from "../pages/product-detail-pages/ZX9Speaker";
+import ZX7Speaker from "../pages/product-detail-pages/ZX7Speaker";
+
+import YX1WirelessEarphones from "../pages/product-detail-pages/YX1WirelessEarphones";
 export default function Navbar() {
     const [navDisplay, setNavDisplay] = useState(false);
 
@@ -51,9 +58,20 @@ export default function Navbar() {
             
             <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/headphones" element={<Headphones />} />
+                {/*headphones*/}
+                <Route exact path="/headphones" element={<Headphones />} />
+                <Route exact path="/headphones/1" element={<XX99Mark2Headphones />} />
+                <Route exact path="/headphones/2" element={<XX99Mark1Headphones />} />
+                <Route exact path="/headphones/3" element={<XX59Headphones />} />
+                
+                {/*speakers*/}
                 <Route path="/speakers" element={<Speakers />} />
+                <Route path="/speakers/1" element={<ZX9Speaker />} />
+                <Route path="/speakers/2" element={<ZX7Speaker />} />
+                
+                {/*earphones*/}
                 <Route path="/earphones" element={<Earphones />} />
+                <Route path="/earphones/1" element={<YX1WirelessEarphones />} />
             </Routes>
         </Router>
     )

@@ -28,7 +28,7 @@ export default function Footer() {
           </div>
         </div>
       
-        <p>Copyright 2021. All Rights Reserved<br/>Website made on <a href="https://www.frontendmentor.io/challenges" target="_blank" rel="noreferrer">frontendmentors</a></p>
+        <p>Copyright 2021. All Rights Reserved.<br/>Mockup from <a href="https://www.frontendmentor.io/challenges" target="_blank" rel="noreferrer">frontendmentors</a></p>
         
       </div>
     </footer>

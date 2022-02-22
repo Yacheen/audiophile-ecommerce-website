@@ -1,0 +1,109 @@
+.purchase-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 6rem;
+    img {
+        max-width: 100%;
+    }
+    .product-details {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 80rem;
+        margin-bottom: 6rem;
+        span {
+            color: $brown;
+        }
+        .product-name {
+            font-size: 1.4rem;
+            letter-spacing: 0.1rem;
+            line-height: 2.4rem;
+            opacity: 0.7;
+            font-weight: 500;
+            color: $light-black;
+        }
+
+        .purchase-buttons {
+            display: flex;
+            .change-quantity-buttons {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: $darker-white;
+                margin-right: 2rem;
+                .subtract {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 6rem;
+                    height: 100%;
+                    user-select: none;
+                    cursor: pointer;
+                    &:hover {
+                        color: $brown;
+                    }
+                }
+                .add {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 6rem;
+                    height: 100%;
+                    user-select: none;
+                    cursor: pointer;
+                    &:hover {
+                        color: $brown;
+                    }
+                }
+            }
+            button {
+                font-weight: 700;
+                margin: 0;
+            }
+        }
+
+    } 
+    .product-features {
+        margin-bottom: 6rem;
+        h5 {
+            margin-bottom: 2rem;
+        }
+        p {
+            color: $light-black;
+            opacity: 0.7;
+            font-size: 1.4rem;
+            
+            line-height: 2.2rem;
+        }
+    }
+    .product-in-the-box {
+        margin-bottom: 6rem;
+        h5 {
+            margin-bottom: 2rem;
+        }
+        .thing {
+            display: flex;
+            font-size: 1.4rem;
+            margin-bottom: 0.8rem;
+            
+            .thing-quantity {
+                color: $brown;
+                width: 4rem;
+                
+            }
+            .thing-name {
+                text-align: left;
+                opacity: 0.6;
+            }
+        }
+
+    }
+    
+    .photography {
+        img {
+            border-radius: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+    }
+}
