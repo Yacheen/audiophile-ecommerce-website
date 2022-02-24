@@ -16,21 +16,25 @@ import photograph3 from "../../assets/product-xx99-mark-two-headphones/mobile/im
 //data
 import headphoneData from "../../assets/data.json";
 
+import {useNavigate} from 'react-router-dom';
 export default function XX99Mark2Headphones() {
+  const navigate = useNavigate();
 
   return (
     <section className="home">
       <div className="home-content">
 
-        {/* <p style={{
-          opacity: "0.6",
+        <p style={{
+          opacity: "0.4",
           marginBottom: "2rem",
           fontSize: "1.4rem",
           textAlign: "left",
-          width: "100%"
+          width: "100%",
+          cursor: "pointer"
           
         }}
-        >Go Back</p> */}
+        onClick={() => navigate(-1)}
+        >Go Back</p>
 
         <PurchaseItem
           description={"The new XX99 Mark II headphones is the pinnacle of pristine audio. It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound."}

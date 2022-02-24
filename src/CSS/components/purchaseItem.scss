@@ -32,6 +32,8 @@
                 background: $darker-white;
                 margin-right: 2rem;
                 .subtract {
+                    font-size: 1.6rem;
+                    opacity: 0.8;
                     display: flex;
                     align-items: center;
                     justify-content: center;
@@ -43,7 +45,13 @@
                         color: $brown;
                     }
                 }
+                p {
+                    font-size: 1.6rem;
+                    font-weight: 700;
+                }
                 .add {
+                    opacity: 0.8;
+                    font-size: 1.6rem;
                     display: flex;
                     align-items: center;
                     justify-content: center;
