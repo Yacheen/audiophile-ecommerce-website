@@ -10,6 +10,10 @@ export default function Reccommendations({
 }) {
   return (
     <section className="reccommendations">
+      <h5 style={{
+        textAlign: "center",
+        marginBottom: "4rem"
+      }}>YOU MAY ALSO LIKE</h5>
       <div className="reccommendation">
         <div className="image-background">
           <img src={image1} alt=""></img>=
