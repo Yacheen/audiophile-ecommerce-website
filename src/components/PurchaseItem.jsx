@@ -1,4 +1,5 @@
-import React, {useState} from 'react'
+import React, { useState, useContext } from 'react'
+import {CartContext} from "../Contexts/CartContext";
 
 export default function PurchaseItem({
     image,
@@ -12,11 +13,13 @@ export default function PurchaseItem({
     photograph2,
     photograph3
 }) {
-  const [quantity, setQuantity] = useState(0);
+  const [cart, setCart] = useContext(CartContext);
+  const [quantity, setQuantity] = useState(1);  
+  
   const handleQuantity = (argument) => {
     switch(argument) {
       case "subtract":
-        if(quantity === 0) {
+        if(quantity === 1) {
           break;
         }
         else {
@@ -31,6 +34,22 @@ export default function PurchaseItem({
       default:
         break;
     }
+  }
+
+  const addToCart = (name, quantity, price) => {
+    console.log(cart);
+    if(cart.length === 0) {
+      console.log('yo');
+      setCart([...cart, {name: name, quantity: quantity, price: price, image: image}])
+    }
+    else {
+      cart.forEach((item, index) => {
+        if(item.name === name) {
+          item.quantity = item.quantity + quantity;
+        }
+      })
+    }
+
   }
   
   return (
@@ -49,7 +68,7 @@ export default function PurchaseItem({
             <div className="add" onClick={() => handleQuantity("add")}>+</div>
           </div>
 
-          <button className="brown-button">ADD TO CART</button>
+          <button className="brown-button" onClick={() => addToCart(name, quantity, price)}>ADD TO CART</button>
         </div>
       </div>
 
@@ -64,7 +83,6 @@ export default function PurchaseItem({
         {/*map through, for each json object, put its key and value pair*/}
         {
           inTheBox.map((thing, index) => {
-            console.log(thing.item);
             return(
               <div className="thing" key={index}>
                 <p className="thing-quantity">{thing.quantity}X</p>

@@ -25,45 +25,6 @@
 
         .purchase-buttons {
             display: flex;
-            .change-quantity-buttons {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                background: $darker-white;
-                margin-right: 2rem;
-                .subtract {
-                    font-size: 1.6rem;
-                    opacity: 0.8;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    width: 6rem;
-                    height: 100%;
-                    user-select: none;
-                    cursor: pointer;
-                    &:hover {
-                        color: $brown;
-                    }
-                }
-                p {
-                    font-size: 1.6rem;
-                    font-weight: 700;
-                }
-                .add {
-                    opacity: 0.8;
-                    font-size: 1.6rem;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    width: 6rem;
-                    height: 100%;
-                    user-select: none;
-                    cursor: pointer;
-                    &:hover {
-                        color: $brown;
-                    }
-                }
-            }
             button {
                 font-weight: 700;
                 margin: 0;

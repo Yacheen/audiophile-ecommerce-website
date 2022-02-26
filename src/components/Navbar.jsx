@@ -1,25 +1,27 @@
 import React, {useState} from "react";
 //react router
 import {BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
+//components
 import Home from "../pages/Home";
 import Headphones from "../pages/Headphones";
 import Speakers from "../pages/Speakers";
 import Earphones from "../pages/Earphones";
+import Products from "./Products";
+import CartModal from "./CartModal";
 //material ui 
 import MenuIcon from '@mui/icons-material/Menu';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import CloseIcon from '@mui/icons-material/Close';
-import Products from "./Products";
+//images
 import XX59Headphones from "../pages/product-detail-pages/XX59Headphones";
 import XX99Mark1Headphones from "../pages/product-detail-pages/XX99Mark1Headphones";
 import XX99Mark2Headphones from "../pages/product-detail-pages/XX99Mark2Headphones";
-
 import ZX9Speaker from "../pages/product-detail-pages/ZX9Speaker";
 import ZX7Speaker from "../pages/product-detail-pages/ZX7Speaker";
-
 import YX1WirelessEarphones from "../pages/product-detail-pages/YX1WirelessEarphones";
 export default function Navbar() {
     const [navDisplay, setNavDisplay] = useState(false);
+    const [cartDisplay, setCartDisplay] = useState(false);
 
     return (
         <Router>
@@ -35,11 +37,28 @@ export default function Navbar() {
                         }
                     </div>
                     <Link to="/" onClick={() =>setNavDisplay(false)}><h4>audiophile</h4></Link>
-                    <div className="cart-button">
+                    <div className="cart-button" onClick={() => setCartDisplay(!cartDisplay)}>
                         <ShoppingCartOutlinedIcon className="nav-icon" fontSize="large" />
                     </div>
                 </div>
             </nav>
+            {/*cart*/}
+            {
+                cartDisplay
+
+                ?
+                    <>
+                    <div className="navigation-background" onClick={() => setNavDisplay(false)} data-aos="fade" data-aos-duration="300">
+                        
+                        </div>
+                        <CartModal setCartDisplay={setCartDisplay}  />
+                    </>
+  
+                :
+                null
+
+            }
+            {/*navigation pane*/}
             {
                 navDisplay
                 ?
