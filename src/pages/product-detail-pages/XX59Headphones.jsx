@@ -40,7 +40,7 @@ export default function XX59Headphones() {
 
           name={"XX59 HEADPHONES"}
           description={"Enjoy your audio almost anywhere and customize it to your specific tastes with the XX59 headphones. The stylish yet durable versatile wireless headset is a brilliant companion at home or on the move."}
-          price={"$ 899"}
+          price={899}
           
           features={
             <p>

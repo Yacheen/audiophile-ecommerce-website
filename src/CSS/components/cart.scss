@@ -1,45 +1,88 @@
+@import "../variables.scss";
+
 .cart {
     position: absolute;
     z-index: 102;
-    width: 90%;
-    margin: 0 auto;
+    width: 32.7rem;
+    left: 5%;
+    top: 12%;
+    border-radius: 0.8rem;
     background: $darker-white;
     
     .cart-content {
         display: flex;
         flex-direction: column;
         width: 90%;
+        margin: 0 auto;
+        padding: 2rem 0;
         
         .cart-length {
             display: flex;
             justify-content: space-between;
+            align-items: center;
             width: 100%;
             align-items: center;
+            margin-bottom: 2rem;
         }
         .cart-products {
             display: flex;
-            flex-direction: column;
+            flex-direction: column; 
+            margin-bottom: 2rem;
 
             .cart-product {
-                margin-bottom: 2rem;
+                margin-bottom: 1.2rem;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
                 width: 100%;
+                .change-quantity-buttons {
+                    background: hsl(0, 0%, 90%);
+                    height: 3.2rem;
+                    width: 9.6rem;
+                    margin-right: 0;
+                }
+                img {
+                    width: 6.4rem;
+                    background: hsl(0, 0%, 90%);
+                }
 
                 .product-label {
                     display: flex;
                     flex-direction: column;
                     justify-content: space-evenly;
                     align-items: center;
+                    text-align: center;
+                    max-width: 6rem;
                     .product-name {
                         font-weight: bold;
+                        font-size: 1.2rem;
                     }
                     .product-price {
                         opacity: 0.6;
+                        font-weight: bold;
                     }
                 }
             }
+        }
+        .cart-total {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+           
+            .cart-total-price {
+                font-size: 1.6rem;
+                font-weight: 700;
+            }
+        }
+        .brown-button {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.4rem;
         }
     }
 }

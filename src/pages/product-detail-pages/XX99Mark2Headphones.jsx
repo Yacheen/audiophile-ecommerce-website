@@ -47,7 +47,7 @@ export default function XX99Mark2Headphones() {
           inTheBox={headphoneData[3].includes}
           isNewProduct={true}
           name={"XX99 MARK II HEADPHONES"}
-          price={"$ 2,999"}
+          price={2999}
           photograph1={photograph1}
           photograph2={photograph2}
           photograph3={photograph3}

@@ -38,7 +38,7 @@ export default function ZX7Speaker() {
           image={zx7speaker}
           name={"ZX7 SPEAKER"}
           description={"Stream high quality sound wirelessly with minimal to no loss. The ZX7 speaker uses high-end audiophile components that represents the top of the line powered speakers for home or studio use."}
-          price={"$ 3,500"}
+          price={3500}
           features={
             <p>
               Reap the advantages of a flat diaphragm tweeter cone. This provides a fast response rate and 

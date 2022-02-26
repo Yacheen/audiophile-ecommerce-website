@@ -36,7 +36,7 @@ export default function XX99Mark1headphones() {
           image={xx99mark1headphones}
           name={"XX99 MARK I HEADPHONES"}
           description={"As the gold standard for headphones, the classic XX99 Mark I offers detailed and accurate audio reproduction for audiophiles, mixing engineers, and music aficionados alike in studios and on the go."}
-          price={"$ 1,750"}
+          price={1750}
           features={
             <p>
               As the headphones all others are measured against, the XX99 Mark I demonstrates over five decades 

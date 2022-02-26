@@ -4,43 +4,63 @@ export default function CartModal() {
     const [cart, setCart] = useContext(CartContext);
     const [total, setTotal] = useState(0);
 
-    const handleQuantity = (argument, product) => {
+    const handleQuantity = (argument, productName) => {
       //filter for product selected, then change quantity based on argument
-      let item = cart.filter(item => item.name !== product);
-
+      
       switch(argument) {
         case "subtract":
-          if(item.quantity === 1) {
+          if(cart.quantity === 1) {
             break;
           }
           else {
-            setCart({...item, [item.quantity]: item.quantity - 1});
+            cart.forEach((item, index) => {
+              if(item.name === productName) {
+                console.log(item.name, productName, item.quantity);
+                item.quantity = item.quantity - 1;
+                console.log(item.quantity);
+              }
+            })
             break;
           }
   
         case "add":
-          setCart({...item, [item.quantity]: item.quantity + 1});
+          cart.forEach((item, index) => {
+            if(item.name === productName) {
+              item.quantity = item.quantity + 1;
+            }
+          })
           break;
         
         default:
           break;
       }
     }
-
-    const cartTotal = () => {
-      cart.forEach(product => {
-        console.log('total loopin')
-        let totalOfItem = product.quantity * product.price
-        setTotal(total + totalOfItem);
-      });
+    const removeAll = () => {
+      setCart([]);
+      console.log(`cart has been reset. ${cart} `);
     }
-    
-    useEffect(() => {
-      console.log('it looping');
-      cartTotal();
-      
 
+    useEffect(() => {
+        if(cart.length > 0) {
+          cart.forEach(product => {
+            let totalOfItem = product.quantity * product.price
+            setTotal(total + totalOfItem);
+          });
+
+        }
+        else {
+          setTotal(0);
+        }
+         
     }, [cart]);
+
+    const formatCurrency = (amount) => {
+      let dollarUS = Intl.NumberFormat("en-US", {
+        style: "currency",
+        currency: "USD",
+      });
+      return dollarUS.format(amount);
+    }
 
 
     return (
@@ -48,8 +68,8 @@ export default function CartModal() {
         <div className="cart-content">
           
             <div className="cart-length">
-              <p>CART ({cart.length})</p>
-              <p>Remove all</p>
+              <p style={{fontWeight: 700, fontSize: "1.6rem"}}>CART ({cart.length})</p>
+              <p style={{textDecoration: "underline", opacity: 0.6, cursor: "pointer"}} onClick={() => removeAll()}>Remove all</p>
             </div>
 
             <div className="cart-products">
@@ -60,7 +80,7 @@ export default function CartModal() {
                       <img src={product.image} alt="" />
                       <div className="product-label">
                         <p className="product-name">{product.name}</p>
-                        <p className="product-price">$ {product.price}</p>
+                        <p className="product-price">{formatCurrency(product.price)}</p>
                       </div>
                       <div className="change-quantity-buttons">
                         <div className="subtract" onClick={() => handleQuantity("subtract", product.name)}>-</div>
@@ -73,8 +93,8 @@ export default function CartModal() {
               }
             </div>
             <div className="cart-total">
-              <p>TOTAL</p>
-              <p>$ {total}</p>
+              <p style={{opacity: 0.8, fontSize: "1.4rem"}}>TOTAL</p>
+              <p className="cart-total-price">{formatCurrency(total)}</p>
             </div>
 
             <div className="brown-button">

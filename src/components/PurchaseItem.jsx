@@ -35,6 +35,13 @@ export default function PurchaseItem({
         break;
     }
   }
+  const formatCurrency = (amount) => {
+    let dollarUS = Intl.NumberFormat("en-US", {
+      style: "currency",
+      currency: "USD",
+    });
+    return dollarUS.format(amount);
+  }
 
   const addToCart = (name, quantity, price) => {
     console.log(cart);
@@ -59,7 +66,7 @@ export default function PurchaseItem({
         {isNewProduct ? <p className="overline"><span>NEW PRODUCT</span></p> : null}
         <h4>{name}</h4>
         <p className="product-name">{description}</p>
-        <h6 className="product-price">{price}</h6>
+        <h6 className="product-price">{formatCurrency(price)}</h6>
 
         <div className="purchase-buttons">
           <div className="change-quantity-buttons">
