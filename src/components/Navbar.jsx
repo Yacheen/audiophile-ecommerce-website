@@ -1,24 +1,27 @@
 import React, {useState} from "react";
 //react router
 import {BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
-//components
+//pages 
 import Home from "../pages/Home";
 import Headphones from "../pages/Headphones";
 import Speakers from "../pages/Speakers";
 import Earphones from "../pages/Earphones";
 import Products from "./Products";
 import CartModal from "./CartModal";
+
 //material ui 
 import MenuIcon from '@mui/icons-material/Menu';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import CloseIcon from '@mui/icons-material/Close';
-//images
+
+//pages as well?
 import XX59Headphones from "../pages/product-detail-pages/XX59Headphones";
 import XX99Mark1Headphones from "../pages/product-detail-pages/XX99Mark1Headphones";
 import XX99Mark2Headphones from "../pages/product-detail-pages/XX99Mark2Headphones";
 import ZX9Speaker from "../pages/product-detail-pages/ZX9Speaker";
 import ZX7Speaker from "../pages/product-detail-pages/ZX7Speaker";
 import YX1WirelessEarphones from "../pages/product-detail-pages/YX1WirelessEarphones";
+import Checkout from "../pages/Checkout";
 export default function Navbar() {
     const [navDisplay, setNavDisplay] = useState(false);
     const [cartDisplay, setCartDisplay] = useState(false);
@@ -90,6 +93,9 @@ export default function Navbar() {
                 {/*earphones*/}
                 <Route exact path="/earphones" element={<Earphones />} />
                 <Route exact path="/earphones/1" element={<YX1WirelessEarphones />} />
+
+                {/*checkout*/}
+                <Route exact path="/checkout" element={<Checkout />} />
             </Routes>
         </Router>
     )
