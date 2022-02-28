@@ -4,29 +4,58 @@ export default function CartModal() {
     const [cart, setCart] = useContext(CartContext);
     const [total, setTotal] = useState(0);
 
+    useEffect(() => {
+      if(cart.length > 0) {
+        let totalOfCart = 0;
+        cart.forEach(item => {
+          totalOfCart = item.quantity * item.price;
+        })
+
+        setTotal(totalOfCart);
+      }
+      else {
+        setTotal(0);
+      }
+       
+  }, [cart]);
+
     const handleQuantity = (argument, productName) => {
       //filter for product selected, then change quantity based on argument
-      
       switch(argument) {
         case "subtract":
-          if(cart.quantity === 1) {
+          let quantityIsOne = cart.map(item => item.quantity === 1 ? true : false);
+          if(quantityIsOne[0] === true) {
             break;
           }
+        
           else {
-            cart.forEach((item, index) => {
-              if(item.name === productName) {
-                console.log(item.name, productName, item.quantity);
-                item.quantity = item.quantity - 1;
-                console.log(item.quantity);
-              }
-            })
+            setCart(prevCart =>
+              prevCart.map(item => 
+                item.name === productName
+                ?  
+                  {...item, quantity: item.quantity - 1}
+                :
+                  item
+              )
+            )
+            console.log('removed quantity');
             break;
           }
   
         case "add":
           cart.forEach((item, index) => {
             if(item.name === productName) {
-              item.quantity = item.quantity + 1;
+              setCart(prevCart =>
+                prevCart.map(item => 
+                  item.name === productName
+                  ?  
+                    {...item, quantity: item.quantity + 1}
+                  :
+                    item
+                )
+              )
+              console.log('added quantity');
+              
             }
           })
           break;
@@ -35,24 +64,11 @@ export default function CartModal() {
           break;
       }
     }
+
     const removeAll = () => {
       setCart([]);
       console.log(`cart has been reset. ${cart} `);
     }
-
-    useEffect(() => {
-        if(cart.length > 0) {
-          cart.forEach(product => {
-            let totalOfItem = product.quantity * product.price
-            setTotal(total + totalOfItem);
-          });
-
-        }
-        else {
-          setTotal(0);
-        }
-         
-    }, [cart]);
 
     const formatCurrency = (amount) => {
       let dollarUS = Intl.NumberFormat("en-US", {
@@ -64,6 +80,7 @@ export default function CartModal() {
 
 
     return (
+      
       <div className="cart">
         <div className="cart-content">
           
@@ -73,6 +90,7 @@ export default function CartModal() {
             </div>
 
             <div className="cart-products">
+              
               {
                 cart.map((product, index) => {
                   return(
@@ -91,6 +109,7 @@ export default function CartModal() {
                   )
                 })
               }
+
             </div>
             <div className="cart-total">
               <p style={{opacity: 0.8, fontSize: "1.4rem"}}>TOTAL</p>
@@ -103,6 +122,7 @@ export default function CartModal() {
 
           </div>
         </div>
+     
      
     )
 }

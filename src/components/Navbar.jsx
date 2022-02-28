@@ -45,34 +45,33 @@ export default function Navbar() {
             {/*cart*/}
             {
                 cartDisplay
-
                 ?
                     <>
-                    <div className="navigation-background" onClick={() => setNavDisplay(false)} data-aos="fade" data-aos-duration="300">
+                        <div className="navigation-background" onClick={() => setCartDisplay(false)} data-aos="fade" data-aos-duration="300">
                         
                         </div>
-                        <CartModal setCartDisplay={setCartDisplay}  />
+                        <CartModal />
                     </>
   
                 :
-                null
-
+                    null
             }
+
             {/*navigation pane*/}
             {
                 navDisplay
                 ?
-                <>
-                    <div className="navigation-background" onClick={() => setNavDisplay(false)} data-aos="fade" data-aos-duration="300">
+                    <>
+                        <div className="navigation-background" onClick={() => setNavDisplay(false)} data-aos="fade" data-aos-duration="300">
+                            
+                        </div>
+                        <div className="navigation-links" data-aos="fade-down" data-aos-duration="300">
+                            <Products setNavDisplay={setNavDisplay} />
+                        </div>
                         
-                    </div>
-                    <div className="navigation-links" data-aos="fade-down" data-aos-duration="300">
-                        <Products setNavDisplay={setNavDisplay} />
-                    </div>
-                    
-                </>
+                    </>
                 :
-                null
+                    null
             }
             
             <Routes>
@@ -84,13 +83,13 @@ export default function Navbar() {
                 <Route exact path="/headphones/3" element={<XX59Headphones />} />
                 
                 {/*speakers*/}
-                <Route path="/speakers" element={<Speakers />} />
-                <Route path="/speakers/1" element={<ZX9Speaker />} />
-                <Route path="/speakers/2" element={<ZX7Speaker />} />
+                <Route exact path="/speakers" element={<Speakers />} />
+                <Route exact path="/speakers/1" element={<ZX9Speaker />} />
+                <Route exact path="/speakers/2" element={<ZX7Speaker />} />
                 
                 {/*earphones*/}
-                <Route path="/earphones" element={<Earphones />} />
-                <Route path="/earphones/1" element={<YX1WirelessEarphones />} />
+                <Route exact path="/earphones" element={<Earphones />} />
+                <Route exact path="/earphones/1" element={<YX1WirelessEarphones />} />
             </Routes>
         </Router>
     )

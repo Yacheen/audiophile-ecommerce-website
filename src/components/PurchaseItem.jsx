@@ -16,7 +16,7 @@ export default function PurchaseItem({
   const [cart, setCart] = useContext(CartContext);
   const [quantity, setQuantity] = useState(1);  
   
-  const handleQuantity = (argument) => {
+  const handleModalQuantity = (argument) => {
     switch(argument) {
       case "subtract":
         if(quantity === 1) {
@@ -24,11 +24,13 @@ export default function PurchaseItem({
         }
         else {
           setQuantity(quantity - 1);
+          console.log('quantity changed on purchase page');
           break;
         }
 
       case "add":
         setQuantity(quantity + 1);
+        console.log('quantity changed on purchase page');
         break;
       
       default:
@@ -44,10 +46,10 @@ export default function PurchaseItem({
   }
 
   const addToCart = (name, quantity, price) => {
-    console.log(cart);
+    
     if(cart.length === 0) {
-      console.log('yo');
-      setCart([...cart, {name: name, quantity: quantity, price: price, image: image}])
+      setCart([...cart, {name: name, quantity: quantity, price: price, image: image}]);
+      
     }
     else {
       cart.forEach((item, index) => {
@@ -70,9 +72,9 @@ export default function PurchaseItem({
 
         <div className="purchase-buttons">
           <div className="change-quantity-buttons">
-            <div className="subtract" onClick={() => handleQuantity("subtract")}>-</div>
+            <div className="subtract" onClick={() => handleModalQuantity("subtract")}>-</div>
             <p>{quantity}</p>
-            <div className="add" onClick={() => handleQuantity("add")}>+</div>
+            <div className="add" onClick={() => handleModalQuantity("add")}>+</div>
           </div>
 
           <button className="brown-button" onClick={() => addToCart(name, quantity, price)}>ADD TO CART</button>
