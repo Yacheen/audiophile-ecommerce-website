@@ -177,7 +177,6 @@ export default function Checkout({setGrandTotal, setSuccessDisplay}) {
 
           <button  disabled={cartIsEmpty} onClick={() => handlePay(cart.length === 0 ? 0 : total + 50 + 1079)} className="brown-button">{cartIsEmpty ? `Please add to cart to continue` : "CONTINUE & PAY"}</button>
 
-          
         </div>
       </div>
       <Footer />

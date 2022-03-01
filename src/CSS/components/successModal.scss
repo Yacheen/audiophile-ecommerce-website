@@ -1,5 +1,68 @@
+@import "../variables.scss";
 .cart {
     .cart-content {
+        .checkmark-circle {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            color: white;
+            width: 6.4rem;
+            height: 6.4rem;
+            background: $brown;
+            margin-bottom: 2rem;
+            .checkmark-icon {
+                font-size: 3.6rem;
+            }
+        }
+        h5 {
+            margin-bottom: 2rem;
+        }
+        .success-products {
+            background: $darker-white;
+            .success-products-content {
+                max-width: 90%;
+                margin: 0 auto;
+            }
+            
+            .success-product {
+                background: $darker-white;
+                min-height: 9rem;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                max-width: 90%;
+                margin: 0 auto;
+               
+                img {
+                    width: 6.4rem;
+                    height: 6.4rem;
+                }
+                
+            }
+            .success-other-items {
+                background: $darker-white;
+                padding: 2rem 0;
+                display: flex;
+                justify-content: center;
+            }
+
+            .success-grand-total {
+                background: $light-black;
+                margin-bottom: 2rem;
+                width: 100%;
+                .grand-total-content {
+                    min-height: 9.2rem;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    max-width: 80%;
+                    margin: 0 auto;
+
+                }
+            }
+        }
         
+
     }
 }
