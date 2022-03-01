@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import AOS from "aos";
 //react router
 import {BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
 //pages 
@@ -40,46 +41,39 @@ export default function Navbar() {
                             navDisplay ? <CloseIcon className="nav-icon" fontSize="large" /> : <MenuIcon className="nav-icon" fontSize="large"/>
                         }
                     </div>
-                    <Link to="/" onClick={() =>setNavDisplay(false)}><h4>audiophile</h4></Link>
+                    <Link to="/" onClick={() => setNavDisplay(false)}><h4>audiophile</h4></Link>
                     <div className="cart-button" onClick={() => setCartDisplay(!cartDisplay)}>
                         <ShoppingCartOutlinedIcon className="nav-icon" fontSize="large" />
                     </div>
                     
                 </div>
+                {/*cart*/}
                 {
                     cartDisplay
                     ?
                         <>
-                            <div className="navigation-background" onClick={() => setCartDisplay(false)} data-aos="fade" data-aos-duration="300">
-                            
-                            </div>
+                        <div data-aos="fade" className="navigation-background" onClick={() => setCartDisplay(false)} />
                             <CartModal />
                         </>
-    
                     :
                         null
-                    }
-            </nav>
-            {/*cart*/}
-            
-
-            {/*navigation pane*/}
-            {
-                navDisplay
-                ?
-                    <>
-                        <div className="navigation-background" onClick={() => setNavDisplay(false)} data-aos="fade" data-aos-duration="300">
+                }
+                {/*navigation pane*/}
+                {
+                    navDisplay
+                    ?
+                        <>
+                            <div data-aos="fade" className="navigation-background" onClick={() => setNavDisplay(false)} />
+                            <div className="navigation-links" data-aos="fade-down" data-aos-duration="500">
+                                <Products setNavDisplay={setNavDisplay} />
+                            </div>
                             
-                        </div>
-                        <div className="navigation-links" data-aos="fade-down" data-aos-duration="300">
-                            <Products setNavDisplay={setNavDisplay} />
-                        </div>
-                        
-                    </>
-                :
-                    null
-            }
-            
+                        </>
+                    :
+                        null
+                }
+            </nav>
+
             <Routes>
                 <Route path="/" element={<Home />} />
                 {/*headphones*/}

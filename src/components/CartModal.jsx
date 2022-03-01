@@ -78,7 +78,7 @@ export default function CartModal() {
 
     return (
       
-      <div className="cart">
+      <div className="cart" data-aos="zoom-in" data-aos-duration="500">
         <div className="cart-content">
           
             <div className="cart-length">
