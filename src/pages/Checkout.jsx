@@ -1,9 +1,38 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { CartContext } from '../Contexts/CartContext';
+import Footer from '../components/Footer';
 export default function Checkout() {
   const [cart, setCart] = useContext(CartContext);
+  const [total, setTotal] = useState(0);
   const navigate = useNavigate();
+  {/*total function, calculations, and maintian state
+    via local/session stprage is todo.
+  */}
+  //useEffect setting cart to localStorage
+  const formatCurrency = (amount) => {
+    let dollarUS = Intl.NumberFormat("en-US", {
+      style: "currency",
+      currency: "USD",
+    });
+    return dollarUS.format(amount);
+  }
+
+  useEffect(() => {
+    if(cart.length > 0) {
+      let totalOfCart = 0;
+      cart.forEach(item => {
+        totalOfCart += item.quantity * item.price;
+      })
+      setTotal(totalOfCart);
+    }
+
+    else {
+      setTotal(0);
+    }
+    
+    console.log(total);
+  }, [cart]);
   return (
     <section className="checkout">
       <p style={{width: "90%",
@@ -102,12 +131,14 @@ export default function Checkout() {
               cart.map(product => {
                 return(
                   <div className="summary-product">
-                    <img src={product.image} alt="" />
-                    <div className="summary-product-label">
-                      <p>{product.name}</p>
-                      <p>{product.price}</p>
+                    <div className="summary-product-left-side">
+                      <img src={product.image} alt="" />
+                      <div className="summary-product-label">
+                        <p style={{fontWeight: 700, fontSize: "1.4rem"}}>{product.name}</p>
+                        <p style={{width: "100%", fontSize: "1.2rem"}}>{formatCurrency(product.price)}</p>
+                      </div>
                     </div>
-                    <p>x{product.quantity}</p>
+                    <p style={{fontSize: "1.4rem", opacity: 0.7 }}>x{product.quantity}</p>
                   </div>
                 )
               })
@@ -115,68 +146,31 @@ export default function Checkout() {
           </div>
 
           <div className="summary-calculation">
-            <p className="label">TOTAL</p> <p className="calculation">{/*insert total here */}</p>
+            <p className="label">TOTAL</p>
+             <p className="calculation">{formatCurrency(total)}</p>
           </div>
 
           <div className="summary-calculation">
-            <p className="label">SHIPPING</p> <p className="calculation">$ 50.00</p>
+            <p className="label">SHIPPING</p>
+             <p className="calculation">{cart.length === 0 ? "$0.00" : "$ 50.00"}</p>
           </div>
 
           <div className="summary-calculation">
-            <p className="label">VAT (INCLUDED)</p> <p className="calculation">$ 1,079.00</p>
+            <p className="label">VAT (INCLUDED)</p>
+             <p className="calculation">{cart.length === 0 ? "$0.00" : "$ 1,079.00"}</p>
           </div>
 
           <div className="summary-calculation">
-            <p className="label">GRAND TOTAL</p> <p className="calculation">{/*insert grand total here*/}</p>
+            <p className="label">GRAND TOTAL</p>
+             <p className="calculation grand-total">{cart.length === 0 ? "$0.00" : formatCurrency(total + 50 + 1079)}</p>
           </div>
-
+            {console.log(cart.length)}
           <button className="brown-button">{"CONTINUE & PAY"}</button>
 
           
         </div>
       </div>
-         Go back
-
-Checkout  
-
-Billing details
-Name
-Email address
-Phone number
-
-Shipping info
-Address
-ZIP code
-City
-Country
-
-Payment details
-Payment method
-e-Money
-Cash on delivery
-e-Money number
-e-money PIN
-
-The ‘Cash on Delivery’ option enables you to pay in cash when our delivery courier arrives 
-at your residence. Just make sure your address is correct so that your order will not be cancelled.
-
-Summary
-XX99 MK II x1
-$2,999
-
-XX59 x2
-$899
-
-YX1 x1
-$599
-
-Total $5,396
-Shipping $10
-VAT $120
-
-Grand total $5,526
-
-Continue & pay
+      <Footer />
     </section>
   )
 }

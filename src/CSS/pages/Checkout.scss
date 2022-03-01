@@ -36,6 +36,31 @@
                 margin-bottom: 2rem;
             }
             .summary-products {
+                
+                .summary-product {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin-bottom: 2rem;
+                    .summary-product-left-side {
+                    display: flex;
+                    align-items: center;
+                    img {
+                        max-width: 6.4rem;
+                        margin-right: 2rem;
+                    }
+                    .summary-product-label {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        text-align: left;
+                        max-width: 60%;
+                    }
+                    }
+                    
+                    
+                }
 
             }
             .summary-calculation {
@@ -84,9 +109,11 @@
     padding: 1.2rem;
     border-radius: 0.8rem;
     border: 1px solid hsla(0, 0%, 50%, 0.6);
+    outline: none;
     &:focus {
+
         border: 2px solid $brown;
-        outline: 2px solid $brown;
+        
     }  
 }   
 
@@ -114,4 +141,7 @@
         user-select: none;
         z-index: 2;
     }
+}
+.grand-total {
+    color: $brown;
 }

@@ -29,6 +29,7 @@ export default function Navbar() {
     return (
         <Router>
             <nav id="nav">
+                
                 {/*change background via classname based on route*/}
                 
                 <div className="nav-content">
@@ -43,22 +44,24 @@ export default function Navbar() {
                     <div className="cart-button" onClick={() => setCartDisplay(!cartDisplay)}>
                         <ShoppingCartOutlinedIcon className="nav-icon" fontSize="large" />
                     </div>
+                    
                 </div>
+                {
+                    cartDisplay
+                    ?
+                        <>
+                            <div className="navigation-background" onClick={() => setCartDisplay(false)} data-aos="fade" data-aos-duration="300">
+                            
+                            </div>
+                            <CartModal />
+                        </>
+    
+                    :
+                        null
+                    }
             </nav>
             {/*cart*/}
-            {
-                cartDisplay
-                ?
-                    <>
-                        <div className="navigation-background" onClick={() => setCartDisplay(false)} data-aos="fade" data-aos-duration="300">
-                        
-                        </div>
-                        <CartModal />
-                    </>
-  
-                :
-                    null
-            }
+            
 
             {/*navigation pane*/}
             {

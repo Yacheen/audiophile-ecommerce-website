@@ -24,13 +24,11 @@ export default function PurchaseItem({
         }
         else {
           setQuantity(quantity - 1);
-          console.log('quantity changed on purchase page');
           break;
         }
 
       case "add":
         setQuantity(quantity + 1);
-        console.log('quantity changed on purchase page');
         break;
       
       default:
@@ -53,9 +51,16 @@ export default function PurchaseItem({
     }
     else {
       cart.forEach((item, index) => {
-        if(item.name === name) {
+        let cartSet = false;
+        if(item.name === name && !cartSet) {
           item.quantity = item.quantity + quantity;
+          cartSet = true;
         }
+        else if (!cartSet){
+          setCart([...cart, {name: name, quantity: quantity, price: price, image: image}]);
+          cartSet = true;
+        }
+        
       })
     }
 

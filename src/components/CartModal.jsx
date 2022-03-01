@@ -8,23 +8,23 @@ export default function CartModal() {
       if(cart.length > 0) {
         let totalOfCart = 0;
         cart.forEach(item => {
-          totalOfCart = item.quantity * item.price;
+          totalOfCart += item.quantity * item.price;
         })
-
         setTotal(totalOfCart);
       }
+
       else {
         setTotal(0);
       }
-       
+
   }, [cart]);
 
     const handleQuantity = (argument, productName) => {
       //filter for product selected, then change quantity based on argument
       switch(argument) {
         case "subtract":
-          let quantityIsOne = cart.map(item => item.quantity === 1 ? true : false);
-          if(quantityIsOne[0] === true) {
+          let item = cart.filter(item => item.name === productName);
+          if(item[0].quantity === 1) {
             break;
           }
         
@@ -38,7 +38,6 @@ export default function CartModal() {
                   item
               )
             )
-            console.log('removed quantity');
             break;
           }
   
@@ -54,7 +53,6 @@ export default function CartModal() {
                     item
                 )
               )
-              console.log('added quantity');
               
             }
           })
@@ -67,7 +65,6 @@ export default function CartModal() {
 
     const removeAll = () => {
       setCart([]);
-      console.log(`cart has been reset. ${cart} `);
     }
 
     const formatCurrency = (amount) => {
@@ -115,14 +112,13 @@ export default function CartModal() {
               <p style={{opacity: 0.8, fontSize: "1.4rem"}}>TOTAL</p>
               <p className="cart-total-price">{formatCurrency(total)}</p>
             </div>
-
+            <a href="/checkout">
             <div className="brown-button">
               CHECKOUT
             </div>
+            </a>
 
           </div>
         </div>
-     
-     
     )
 }
