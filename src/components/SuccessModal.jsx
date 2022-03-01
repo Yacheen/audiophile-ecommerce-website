@@ -36,8 +36,8 @@ const handleBackToHome = () => {
 }
 
   return (
-    <div className="cart">
-      <div className="cart-content">
+    <div style={{maxHeight: "60rem", top: "50%"}} className="cart">
+      <div style={{maxHeight: "60rem"}} className="cart-content">
         <div className="checkmark-circle">
           <CheckIcon className="checkmark-icon" />
         </div>

@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-import AOS from "aos";
 //react router
 import {BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
 //pages 

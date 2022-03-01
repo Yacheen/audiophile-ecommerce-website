@@ -9,12 +9,13 @@ export default function Footer() {
       <div className="footer-content">
       
         <div className="footer-buttons">
-        <h5>audiophile</h5>
-          <p>HOME</p>
-          <p>HEADPHONES</p>
-          <p>SPEAKERS</p>
-          <p>EARPHONES</p>
+          <h5>audiophile</h5>
+          <a href="/"><p>HOME</p></a>
+          <a href="/headphones"><p>HEADPHONES</p></a>
+          <a href="/speakers"><p>SPEAKERS</p></a>
+          <a href="/earphones"><p>EARPHONES</p></a>
         </div>
+
         <div className="footer-description">
           <p>
             Audiophile is an all in one stop to fulfill your audio needs. We're a small team of music lovers

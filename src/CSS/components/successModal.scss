@@ -1,6 +1,8 @@
 @import "../variables.scss";
 .cart {
+ 
     .cart-content {
+ 
         .checkmark-circle {
             display: flex;
             justify-content: center;
@@ -20,6 +22,7 @@
         }
         .success-products {
             background: $darker-white;
+            border-radius: 2rem;
             .success-products-content {
                 max-width: 90%;
                 margin: 0 auto;
@@ -51,6 +54,8 @@
                 background: $light-black;
                 margin-bottom: 2rem;
                 width: 100%;
+                border-bottom-left-radius: 2rem;
+                border-bottom-right-radius: 2rem;
                 .grand-total-content {
                     min-height: 9.2rem;
                     display: flex;
@@ -62,7 +67,5 @@
                 }
             }
         }
-        
-
     }
 }

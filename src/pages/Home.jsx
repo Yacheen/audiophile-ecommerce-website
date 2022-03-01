@@ -17,7 +17,10 @@ export default function Home() {
                         Experience natural, lifelike audio and exceptional build quality made for the
                         passionate music enthusiast.
                     </p>
-                    <button type="button">SEE PRODUCT</button>
+                    <a href="headphones/1">
+                        <button type="button">SEE PRODUCT</button>
+                    </a>
+
                 </div>
             </div>
 
@@ -42,14 +45,18 @@ export default function Home() {
                                 Upgrade to premium speakers that are phenomenally built to deliver truly
                                 remarkable sound.
                             </p>
-                            <button className="black-button">SEE PRODUCT</button>
+                            <a href="/speakers/1">
+                                <button className="black-button">SEE PRODUCT</button>
+                            </a>
                         </div>
                     </div>
                     
                     <div className="home-main-zx7">
                         <div className="zx7-speaker-text">
                                 <h3>ZX7 SPEAKER</h3>
-                                <button className="transparent-button">SEE PRODUCT</button>
+                                <a href="/speakers/2">
+                                    <button className="transparent-button">SEE PRODUCT</button>
+                                </a>
                         </div>
 
                         <div className="zx7-speaker">
@@ -65,7 +72,9 @@ export default function Home() {
                         <div className="yx1-description">
                             <div className="yx1-content">
                                 <h3>YX1 EARPHONES</h3>
-                                <button className="transparent-button">SEE PRODUCT</button>
+                                <a href="/earphones/1">
+                                    <button className="transparent-button">SEE PRODUCT</button>
+                                </a>
                             </div>
                         </div>
                     </div>
