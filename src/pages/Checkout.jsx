@@ -2,9 +2,11 @@ import React, { useContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { CartContext } from '../Contexts/CartContext';
 import Footer from '../components/Footer';
-export default function Checkout() {
+export default function Checkout({setGrandTotal, setSuccessDisplay}) {
   const [cart, setCart] = useContext(CartContext);
   const [total, setTotal] = useState(0);
+  const [cartIsEmpty, setCartIsEmpty] = useState(cart.length > 0 ? false : true);
+
   const navigate = useNavigate();
   {/*total function, calculations, and maintian state
     via local/session stprage is todo.
@@ -33,6 +35,14 @@ export default function Checkout() {
     
     console.log(total);
   }, [cart]);
+
+  const handlePay = (grand_total) => {
+    if(grand_total === 0) return;
+
+    setGrandTotal(grand_total);
+    setSuccessDisplay(true);
+  }
+
   return (
     <section className="checkout">
       <p style={{width: "90%",
@@ -164,8 +174,8 @@ export default function Checkout() {
             <p className="label">GRAND TOTAL</p>
              <p className="calculation grand-total">{cart.length === 0 ? "$0.00" : formatCurrency(total + 50 + 1079)}</p>
           </div>
-            {console.log(cart.length)}
-          <button className="brown-button">{"CONTINUE & PAY"}</button>
+
+          <button  disabled={cartIsEmpty} onClick={() => handlePay(cart.length === 0 ? 0 : total + 50 + 1079)} className="brown-button">{cartIsEmpty ? `Please add to cart to continue` : "CONTINUE & PAY"}</button>
 
           
         </div>

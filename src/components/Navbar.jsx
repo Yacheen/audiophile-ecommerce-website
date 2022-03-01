@@ -9,6 +9,7 @@ import Speakers from "../pages/Speakers";
 import Earphones from "../pages/Earphones";
 import Products from "./Products";
 import CartModal from "./CartModal";
+import SuccessModal from "./SuccessModal";
 
 //material ui 
 import MenuIcon from '@mui/icons-material/Menu';
@@ -23,9 +24,12 @@ import ZX9Speaker from "../pages/product-detail-pages/ZX9Speaker";
 import ZX7Speaker from "../pages/product-detail-pages/ZX7Speaker";
 import YX1WirelessEarphones from "../pages/product-detail-pages/YX1WirelessEarphones";
 import Checkout from "../pages/Checkout";
+
 export default function Navbar() {
     const [navDisplay, setNavDisplay] = useState(false);
     const [cartDisplay, setCartDisplay] = useState(false);
+    const [successDisplay, setSuccessDisplay] = useState(false);
+    const [grandTotal, setGrandTotal] = useState(0);
 
     return (
         <Router>
@@ -72,6 +76,17 @@ export default function Navbar() {
                     :
                         null
                 }
+                {
+                    successDisplay
+                    ?
+                        <>
+                            <div data-aos="fade" className="navigation-background" />
+                            <SuccessModal grandTotal={grandTotal} />
+                        </>
+                    :
+                        null
+
+                }
             </nav>
 
             <Routes>
@@ -92,7 +107,7 @@ export default function Navbar() {
                 <Route exact path="/earphones/1" element={<YX1WirelessEarphones />} />
 
                 {/*checkout*/}
-                <Route exact path="/checkout" element={<Checkout />} />
+                <Route exact path="/checkout" element={<Checkout setGrandTotal={setGrandTotal} setSuccessDisplay={setSuccessDisplay} />} />
             </Routes>
         </Router>
     )
