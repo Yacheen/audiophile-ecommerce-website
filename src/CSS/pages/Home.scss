@@ -227,6 +227,31 @@
                         }
                     }
                 }
+                .home-main-yx1 {
+                    flex-direction: row;
+                    justify-content: center;
+                    position: relative;
+                    height: 30rem;
+                    
+                    
+                    .yx1-earphones {
+                        width: 50%;
+                        height: 100%;
+                        margin-bottom: 0;
+                        margin-right: 2rem;
+                        img {
+                            height: 100%;
+                            max-width: 54rem;
+                        }
+                        
+                    }
+                    .yx1-description {
+                        width: 50%;
+                        .yx1-content {
+                            min-height: 30rem;
+                        }
+                    }
+                }
 
             }
         }
@@ -235,11 +260,15 @@
 .zx7-speaker-desktop {
     display: none;
 }
+.cart-text {
+    display: none;
+}
 
 //desktop/laptop
 
 @media screen and (min-width: 1050px) {
- 
+    //cart
+    
     .home {
         .home-hero {
             background: none;
@@ -330,15 +359,11 @@
                         img {
                             width: 100%;
                             border-radius: 0.6rem;
-                            max-height: 32rem;
+                            
                         }
                     }
                 }
-
             }
-        }
-        
+        } 
     }
-    
-
 }

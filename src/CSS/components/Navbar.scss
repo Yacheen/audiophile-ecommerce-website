@@ -13,13 +13,11 @@
         margin: 0 auto;
         min-height: 10vh;
         .nav-icon {
+            
             color: $darker-white;
-            cursor: pointer;
-            &:hover {
-                color: $brown;
-                transition: all ease 0.2s;
-            }
+            font-size: 2.4rem;
         }
+
         h4 {
             color: $darker-white;
             cursor: pointer;
@@ -64,10 +62,37 @@
 
 
 @media screen and (min-width: 1050px) {
+    
+    
     #nav {
-        
         .nav-content {
             width: 75%;
+
+            .cart-button{
+                position: relative;
+                z-index: 5;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                &:hover {
+                    .cart-text {
+                        color: $brown;
+                    }
+                    .nav-icon {
+                        color: $brown;
+                    }
+                }
+            }
+            .cart-text {
+                
+                display: contents;
+                color: hsl(0, 0%, 90%);
+                font-size: 1.4rem;
+                font-weight: 600;
+                letter-spacing: 0.1rem;
+                cursor: pointer;
+        
+            }
         }
     }
 

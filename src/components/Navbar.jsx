@@ -51,8 +51,9 @@ export default function Navbar() {
                         </ul>
                         <Link to="/" onClick={() => setNavDisplay(false)}><h4>audiophile</h4></Link>
                    
-
+                        
                     <div className="cart-button" onClick={() => setCartDisplay(!cartDisplay)}>
+                        <p className="cart-text">CART</p>
                         <ShoppingCartOutlinedIcon className="nav-icon" fontSize="large" />
                     </div>
                     

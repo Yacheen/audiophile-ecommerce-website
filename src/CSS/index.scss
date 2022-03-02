@@ -74,7 +74,8 @@ a {
     transition: all ease 0.2s;
     cursor: pointer;
     &:hover {
-        background: $white;
+        background: $black;
+        color: hsl(0, 0%, 90%);
     }
 }
 
