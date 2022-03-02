@@ -38,13 +38,20 @@ export default function Navbar() {
                 
                 <div className="nav-content">
                     {/* add navigation panel for phone here */}
-                    
-                    <div className="burger-button" onClick={() => setNavDisplay(!navDisplay)}>
-                        {
-                            navDisplay ? <CloseIcon className="nav-icon" fontSize="large" /> : <MenuIcon className="nav-icon" fontSize="large"/>
-                        }
-                    </div>
-                    <Link to="/" onClick={() => setNavDisplay(false)}><h4>audiophile</h4></Link>
+                        <div className="burger-button" onClick={() => setNavDisplay(!navDisplay)}>
+                            {
+                                navDisplay ? <CloseIcon className="nav-icon" fontSize="large" /> : <MenuIcon className="nav-icon" fontSize="large"/>
+                            }
+                        </div>
+                        <ul className="navbar-links">
+                            <a href="/"><li>HOME</li></a>
+                            <a href="/headphones"><li>HEADPHONES</li></a>
+                            <a href="/speakers"><li>SPEAKERS</li></a>
+                            <a href="/earphones"><li>EARPHONES</li></a>
+                        </ul>
+                        <Link to="/" onClick={() => setNavDisplay(false)}><h4>audiophile</h4></Link>
+                   
+
                     <div className="cart-button" onClick={() => setCartDisplay(!cartDisplay)}>
                         <ShoppingCartOutlinedIcon className="nav-icon" fontSize="large" />
                     </div>

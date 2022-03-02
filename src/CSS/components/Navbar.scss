@@ -15,10 +15,18 @@
         .nav-icon {
             color: $darker-white;
             cursor: pointer;
+            &:hover {
+                color: $brown;
+                transition: all ease 0.2s;
+            }
         }
         h4 {
             color: $darker-white;
             cursor: pointer;
+            &:hover {
+                color: $brown;
+                transition: all ease 0.2s;
+            }
         } 
     }
 }
@@ -49,4 +57,38 @@
     top: 10vh;
     background: white;
     padding: 6rem 2rem 0rem 2rem;
+}
+.navbar-links {
+    display: none;
+}
+
+
+@media screen and (min-width: 1050px) {
+    #nav {
+        
+        .nav-content {
+            width: 75%;
+        }
+    }
+
+    .burger-button {
+        display: none;
+    }
+    .navbar-links {
+        display: flex;
+        list-style-type: none;
+        
+        li {
+            transition: all ease 0.2s;
+            color: $darker-white;
+            margin-right: 2rem;
+            font-size: 1.4rem;
+            font-weight: 600;
+            letter-spacing: 0.1rem;
+            &:hover {
+                color: $brown;
+            }
+            
+        }
+    }
 }

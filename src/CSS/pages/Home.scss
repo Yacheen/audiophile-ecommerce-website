@@ -2,15 +2,15 @@
     display: flex;
     flex-direction: column;
     .home-hero {
-        min-height: 60rem;
+        min-height: 52rem;
         background: url("../../assets/home/mobile/image-header.jpg");
         background-size: cover;
+        background-position: bottom;
         background-repeat: no-repeat;
         color: $darker-white;
         
-        
         .home-hero-content {
-            padding-top: 30vh;
+            padding-top: 15vh;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -36,7 +36,7 @@
                 max-width: 80%;
             }
             button {
-                padding: 1.2rem;
+                
                 background: $brown;
                 transition: all ease 0.3s;
                 border: none;
@@ -45,6 +45,9 @@
                 font-size: 1.3rem;
                 letter-spacing: 0.1rem;
                 cursor: pointer;
+                width: 16rem;
+                height: 4.8rem;
+                border-radius: 0.2rem;
 
                 &:hover {
                     background: $light-brown;
@@ -165,4 +168,136 @@
             }
         }
     }
+}
+
+//media queries
+@media screen and (min-width: 750px) {
+    .home {
+        .home-hero {
+            background: url("../../assets/home/tablet/image-header.jpg");
+            background-size: cover;
+            background-position-y: 90%;
+            background-repeat: no-repeat;
+            width: 100%;  
+            margin-bottom: 4rem;
+
+            .home-hero-content {
+                padding-top: 15vh;
+                max-width: 60%;
+                h2 {
+                    font-size: 5.2rem;
+                    line-height: 5rem;
+                }
+                .home-hero-description {
+                    line-height: 2.4rem;
+                    font-size: 1.6rem;
+                }
+            }
+        }
+        .home-content {
+            .home-main {
+
+                .home-main-zx9 {
+                    .zx9-background-pattern {
+                        right: 0%;
+                        bottom: 25%;
+                        
+                    }
+
+                    .zx9-speaker {
+                        img {
+                            max-width: 20rem;
+                        }
+                    }
+
+                    .zx9-description {
+                        min-height: 28rem;
+                        h3 {
+                            font-size: 4.6rem;
+                            line-height: 5.2rem;
+                        }
+                        p {
+                            max-width: 50%;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+//desktop/laptop
+
+@media screen and (min-width: 1050px) {
+    .home {
+        .home-hero {
+            background: none;
+            background: hsl(0, 0%, 7%);
+            
+            .home-hero-content {
+                background: url("../../assets/home/desktop/actual-hero-image.png");
+                background-size: 80rem;
+                background-position: 100%;
+                background-repeat: no-repeat;
+                align-items: flex-start;
+                background-position-y: 45%;
+                width: 100%;
+                min-width: 75%;
+                min-height: 64rem;
+
+                > * {
+                    margin-bottom: 4rem;
+                }
+                h2 {
+                    font-size: 5.6rem;
+                }
+                
+                
+                .home-hero-description {
+                    max-width: 30%;
+                    text-align: left;
+                   
+                }
+            }
+
+        }
+        .home-content {
+            .home-main {
+                width: 85%;
+                
+
+                .home-main-zx9 {
+                    flex-direction: row;
+                    .zx9-background-pattern {
+                        right: 50%;
+                        bottom: 25%;
+                        
+                    }
+
+                    .zx9-speaker {
+                        img {
+                            max-width: 40rem;
+                            
+                        }
+                    }
+
+                    .zx9-description {
+                        min-height: 28rem;
+                        h3 {
+                            font-size: 4.6rem;
+                            line-height: 5.2rem;
+                        }
+                        p {
+                            max-width: 50%;
+                        }
+                    }
+                }
+
+            }
+        }
+        
+    }
+    
+
 }

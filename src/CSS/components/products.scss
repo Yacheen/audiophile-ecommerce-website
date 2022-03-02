@@ -25,8 +25,8 @@
             }
         }
         img {
-            max-width: 100px;
-            max-height: 100px;
+            max-width: 10rem;
+            max-height: 10rem;
             transform: translateY(-65%);
             position: absolute;
             z-index: 5;
@@ -53,4 +53,36 @@
             }
         }
     }
+}
+
+//media queries
+
+@media screen and (min-width: 750px) {
+    .products {
+        flex-direction: row;
+        justify-content: space-between;
+        .product {
+            width: 22.3rem;
+            img {
+                max-width: 12rem;
+                max-height: 12rem;
+                transform: translateY(-40%);
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1050px) {
+    .products {
+        width: 85%;
+        .product {
+            width: 35rem;
+            height: 16rem;
+            img {
+                max-width: 16rem;
+                max-height: 16rem;
+            }
+        }
+    }
+
 }
