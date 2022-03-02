@@ -17,6 +17,7 @@ export default function Earphones() {
               isNewProduct={true}
               name={"YX1 wireless earphones"}
               picture={yx1earphones}
+              link={"/earphones/1"}
         />
 
         </div>

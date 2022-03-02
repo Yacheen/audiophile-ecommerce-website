@@ -1,69 +1,113 @@
 @import "../variables.scss";
-.cart {
- 
-    .cart-content {
- 
-        .checkmark-circle {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 50%;
-            color: white;
-            width: 6.4rem;
-            height: 6.4rem;
-            background: $brown;
-            margin-bottom: 2rem;
-            .checkmark-icon {
-                font-size: 3.6rem;
-            }
-        }
-        h5 {
-            margin-bottom: 2rem;
-        }
-        .success-products {
-            background: $darker-white;
-            border-radius: 2rem;
-            .success-products-content {
-                max-width: 90%;
-                margin: 0 auto;
-            }
-            
-            .success-product {
-                background: $darker-white;
-                min-height: 9rem;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                max-width: 90%;
-                margin: 0 auto;
-               
-                img {
-                    width: 6.4rem;
-                    height: 6.4rem;
-                }
-                
-            }
-            .success-other-items {
-                background: $darker-white;
-                padding: 2rem 0;
+.success-container {
+    .cart {
+        max-height: 60rem;
+        top: 50%;
+    
+        .cart-content {
+            max-height: 60rem;
+    
+            .checkmark-circle {
                 display: flex;
                 justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                color: white;
+                width: 6.4rem;
+                height: 6.4rem;
+                background: $brown;
+                margin-bottom: 2rem;
+                .checkmark-icon {
+                    font-size: 3.6rem;
+                }
             }
 
-            .success-grand-total {
-                background: $light-black;
+            h5 {
                 margin-bottom: 2rem;
-                width: 100%;
-                border-bottom-left-radius: 2rem;
-                border-bottom-right-radius: 2rem;
-                .grand-total-content {
-                    min-height: 9.2rem;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-evenly;
-                    max-width: 80%;
+            }
+            .success-email-confirmation {
+                font-size: 1.4rem;
+                max-width: 90%;
+                opacity: 0.7;
+                margin-bottom: 4rem;
+            }
+            .success-products {
+                background: $darker-white;
+                border-radius: 2rem;
+                .success-products-content {
+                    max-width: 90%;
                     margin: 0 auto;
+                    .success-product {
+                        background: $darker-white;
+                        min-height: 9rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        max-width: 90%;
+                        margin: 0 auto;
+                    
+                        img {
+                            width: 6.4rem;
+                            height: 6.4rem;
+                        }
+                        .success-label {
+                            max-width: 50%;
+                            .success-name {
+                                font-size: 1.4rem;
+                                font-weight: 700;
+                                margin-bottom: 0.2rem;
+                            }
+                            .success-price {
+                                font-size: 1.2rem;
+                                font-weight: 700;
+                                opacity: 0.7;
+                            }
+                        }
+                        p {
+                            font-size: 1.4rem;
+                            font-weight: 700;
+                            opacity: 0.7;
+                        }
+                        
+                    }
+                    .success-other-items {
+                        background: $darker-white;
+                        padding: 2rem 0;
+                        display: flex;
+                        justify-content: center;
+                        font-weight: 600;
+                        opacity: 0.7;
+                        font-size: 1.2rem;
+                    }
+                }
+                
+                .success-grand-total {
+                    background: $light-black;
+                    margin-bottom: 2rem;
+                    width: 100%;
+                    border-bottom-left-radius: 2rem;
+                    border-bottom-right-radius: 2rem;
+                    .grand-total-content {
+                        min-height: 9.2rem;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-evenly;
+                        max-width: 80%;
+                        margin: 0 auto;
+                        .grand-total {
+                            opacity: 0.6;
+                            color: hsl(0, 0%, 90%);
+                            font-size: 1.2rem;
+                            letter-spacing: 0.1rem;
+                            
+                        }
+                        .grand-total-price {
+                            color: hsl(0, 0%, 100%);
+                            font-size: 1.6rem;
+                            font-weight: 600;
 
+                        }
+                    }
                 }
             }
         }
