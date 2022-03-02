@@ -124,10 +124,16 @@
             .home-main-zx7 {
                 position: relative;
                 margin-bottom: 2.4rem;
+                max-height: 50rem;
+
                 .zx7-speaker {
+                    width: 100%;
+                   
                     img {
                         width: 100%;
                         border-radius: 0.6rem;
+                        max-height: 50rem;
+                        
                     }
                 }
                 .zx7-speaker-text {
@@ -226,10 +232,14 @@
         }
     }
 }
+.zx7-speaker-desktop {
+    display: none;
+}
 
 //desktop/laptop
 
 @media screen and (min-width: 1050px) {
+ 
     .home {
         .home-hero {
             background: none;
@@ -268,28 +278,59 @@
                 
 
                 .home-main-zx9 {
+                    position: relative;
                     flex-direction: row;
+                    text-align: left;
+                    justify-content: space-evenly;
+                    align-items: unset;
+                    
                     .zx9-background-pattern {
-                        right: 50%;
-                        bottom: 25%;
+                        right: -108%;
+                        bottom: -5%;
+                        width: 200%;
                         
                     }
 
                     .zx9-speaker {
+                        display: flex;
+                        align-items: flex-end;
                         img {
-                            max-width: 40rem;
-                            
+                            max-width: 40rem; 
+                            transform: translateY(10%);
                         }
                     }
 
                     .zx9-description {
-                        min-height: 28rem;
+                        justify-content: center;
+                        min-height: 24rem;
+                        width: 36rem;
+                        
                         h3 {
                             font-size: 4.6rem;
                             line-height: 5.2rem;
+                            margin-bottom: 2rem;
                         }
                         p {
-                            max-width: 50%;
+                            max-width: 100%;
+                            margin: 0 auto 2rem 0;
+                            font-weight: 500;
+                            font-size: 1.6rem;
+                            
+                        }
+                    }
+                }
+
+                .home-main-zx7 {
+                    .zx7-speaker {
+                        display: none;
+                    }
+                    .zx7-speaker-desktop {
+                        display: unset;
+                        width: 100%;
+                        img {
+                            width: 100%;
+                            border-radius: 0.6rem;
+                            max-height: 32rem;
                         }
                     }
                 }

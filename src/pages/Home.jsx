@@ -1,7 +1,8 @@
 import React from "react";
 import Products from "../components/Products";
 import Footer from "../components/Footer";
-import zx9speakerMobile from "../assets/home/mobile/image-speaker-zx9.png";
+import zx9speakerMobile from "../assets/home/desktop/image-speaker-zx9.png";
+import zx7speakerDesktop from "../assets/home/desktop/image-speaker-zx7.jpg";
 import zx7speakerMobile from "../assets/home/mobile/image-speaker-zx7.jpg";
 import yx1earphonesMobile from "../assets/home/mobile/image-earphones-yx1.jpg";
 import zx9backgroundpattern from "../assets/home/desktop/pattern-circles.svg";
@@ -12,7 +13,7 @@ export default function Home() {
             <div className="home-hero">
                 <div className="home-hero-content">
                     <p className="overline new-product">NEW PRODUCT</p>
-                    <h2>XX99 Mark II Headphones</h2>
+                    <h2>XX99 Mark II <br/> Headphones</h2>
                     <p className="home-hero-description">
                         Experience natural, lifelike audio and exceptional build quality made for the
                         passionate music enthusiast.
@@ -61,6 +62,9 @@ export default function Home() {
 
                         <div className="zx7-speaker">
                             <img src={zx7speakerMobile} alt="" />
+                        </div>
+                        <div className="zx7-speaker-desktop">
+                            <img src={zx7speakerDesktop} alt="" />
                         </div>
                         
                     </div>
