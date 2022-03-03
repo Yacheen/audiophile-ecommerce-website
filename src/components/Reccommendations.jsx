@@ -6,7 +6,10 @@ export default function Reccommendations({
   image3,
   name1,
   name2,
-  name3
+  name3,
+  link1,
+  link2,
+  link3
 }) {
   return (
     <section className="reccommendations">
@@ -21,7 +24,9 @@ export default function Reccommendations({
           </div>
 
           <h4>{name1}</h4>
-          <button className="brown-button">SEE PRODUCT</button>
+          <a href={link1}>
+            <button className="brown-button">SEE PRODUCT</button>
+          </a>
         </div>
 
         <div className="reccommendation">
@@ -29,7 +34,9 @@ export default function Reccommendations({
             <img src={image2} alt=""></img>
           </div>
           <h4>{name2}</h4>
-          <button className="brown-button">SEE PRODUCT</button>
+          <a href={link2}>
+            <button className="brown-button">SEE PRODUCT</button>
+          </a>
         </div>
 
         <div className="reccommendation">
@@ -37,7 +44,9 @@ export default function Reccommendations({
             <img src={image3} alt=""></img>
           </div>
           <h4>{name3}</h4>
-          <button className="brown-button">SEE PRODUCT</button>
+          <a href={link3}>
+            <button className="brown-button">SEE PRODUCT</button>
+          </a>
         </div>
 
       </div>

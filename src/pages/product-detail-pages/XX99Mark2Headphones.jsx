@@ -45,8 +45,11 @@ export default function XX99Mark2Headphones() {
 
         <Reccommendations 
           image1={x99mark1headphones}
+          link1={"/headphones/2"}
           image2={x59headphones}
+          link2={"/headphones/3"}
           image3={zx9speaker}
+          link3={"/speakers/1"}
           name1={"XX99 MARK I"}
           name2={"XX59"}
           name3={"ZX9 SPEAKER"}

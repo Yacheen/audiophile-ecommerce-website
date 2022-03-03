@@ -127,7 +127,24 @@ a {
         }
     }
 }
+.added-to-cart-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: hsl(115, 55%, 37%);
+    border: none;
+    width: 16rem;
+    height: 4.8rem;
+    margin: 0 auto;
+    color: $darker-white;
+    cursor: pointer;
+    transition: all ease 0.4s;
+    letter-spacing: 0.2rem;
+    &:hover {
+        background: hsl(115, 55%, 47%);
+    }
 
+}
 @import "./components/Navbar.scss";
 @import "./pages/Home.scss";
 @import "../CSS/components/products.scss";

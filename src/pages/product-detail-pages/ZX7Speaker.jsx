@@ -52,12 +52,15 @@ export default function ZX7Speaker() {
         <Reccommendations
           image1={zx9speaker}
           name1={"ZX9 SPEAKER"}
+          link1={"/speakers/1"}
 
           image2={xx99mark1headphones}
           name2={"XX99 MARK I"}
+          link2={"/headphones/2"}
 
           image3={xx59headphones}
           name3={"XX59"}
+          link3={"/headphones/3"}
         />
         <Products />
         <AboutAudiophile />

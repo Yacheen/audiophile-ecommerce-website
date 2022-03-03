@@ -54,12 +54,15 @@ export default function YX1WirelessEarphones() {
         <Reccommendations 
           image1={xx99mark1headphones}
           name1={"XX99 MARK I"}
+          link1={"/headphones/2"}
 
           image2={xx59headphones}
           name2={"XX59"}
+          link2={"/headphones/3"}
 
           image3={zx9speaker}
           name3={"ZX9 SPEAKER"}
+          link3={"/speakers/1"}
         />
 
         <Products />

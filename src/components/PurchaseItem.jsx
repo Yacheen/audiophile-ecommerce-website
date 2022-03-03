@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react'
 import {CartContext} from "../Contexts/CartContext";
 import { useMediaQuery } from '@mui/material';
+import CheckIcon from '@mui/icons-material/Check';
 
 export default function PurchaseItem({
     image,
@@ -16,6 +17,7 @@ export default function PurchaseItem({
 }) {
   const [cart, setCart] = useContext(CartContext);
   const [quantity, setQuantity] = useState(1); 
+  const [addedToCart, setAddedToCart] = useState(false);
   
   const isTabletPlus = useMediaQuery('(min-width: 750px)');  
   
@@ -56,9 +58,18 @@ export default function PurchaseItem({
       cart.forEach((item, index) => {
         let cartSet = false;
         if(item.name === name && !cartSet) {
-          item.quantity = item.quantity + quantity;
+          setCart(prevCart =>
+            prevCart.map(item => 
+              item.name === name
+              ?  
+                {...item, quantity: item.quantity + quantity}
+              :
+                item
+            )
+          )
           cartSet = true;
         }
+
         else if (!cartSet){
           setCart([...cart, {name: name, quantity: quantity, price: price, image: image}]);
           cartSet = true;
@@ -66,6 +77,10 @@ export default function PurchaseItem({
         
       })
     }
+    setAddedToCart(true);
+    setTimeout(() => {
+      setAddedToCart(false);
+    }, 2000)
 
   }
   
@@ -86,7 +101,7 @@ export default function PurchaseItem({
               <div className="add" onClick={() => handleModalQuantity("add")}>+</div>
             </div>
 
-            <button className="brown-button" onClick={() => addToCart(name, quantity, price)}>ADD TO CART</button>
+            <button disabled={addedToCart} className={`${addedToCart ? "added-to-cart-button" : "brown-button"}`} onClick={() => addToCart(name, quantity, price)}>{addedToCart ? <CheckIcon fontSize="large" /> : null }{addedToCart ? "ADDED TO CART" : "ADD TO CART"}</button>
           </div>
         </div>
       </div>

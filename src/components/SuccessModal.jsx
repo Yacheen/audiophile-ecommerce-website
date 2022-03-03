@@ -20,7 +20,7 @@ export default function SuccessModal() {
       cart.forEach(item => {
         totalOfCart += item.quantity * item.price;
       })
-      setTotal(totalOfCart);
+      setTotal(totalOfCart + 50 + 1079);
     }
 
     else {
