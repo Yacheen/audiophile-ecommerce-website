@@ -59,10 +59,12 @@
 
 @media screen and (min-width: 750px) {
     .products {
+        max-width: 95%;
         flex-direction: row;
         justify-content: space-between;
         .product {
-            width: 22.3rem;
+            
+            
             img {
                 max-width: 12rem;
                 max-height: 12rem;
@@ -74,9 +76,9 @@
 
 @media screen and (min-width: 1050px) {
     .products {
-        width: 85%;
+        max-width: 82.5%;
         .product {
-            width: 35rem;
+            width: 32rem;
             height: 16rem;
             img {
                 max-width: 16rem;
