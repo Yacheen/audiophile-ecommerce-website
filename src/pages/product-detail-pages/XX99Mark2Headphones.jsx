@@ -24,17 +24,7 @@ export default function XX99Mark2Headphones() {
     <section className="home">
       <div className="home-content">
 
-        <p style={{
-          opacity: "0.6",
-          marginBottom: "2rem",
-          fontSize: "1.4rem",
-          textAlign: "left",
-          width: "100%",
-          cursor: "pointer"
-          
-        }}
-        onClick={() => navigate(-1)}
-        >Go Back</p>
+      <p className="item-page-go-back" onClick={() => navigate(-1)}>Go Back</p>
 
         <PurchaseItem
           description={"The new XX99 Mark II headphones is the pinnacle of pristine audio. It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound."}

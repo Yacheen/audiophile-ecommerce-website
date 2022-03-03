@@ -22,17 +22,7 @@ export default function ZX9Speaker() {
   return (
     <section className="home">
       <div className="home-content">
-      <p style={{
-          opacity: "0.4",
-          marginBottom: "2rem",
-          fontSize: "1.4rem",
-          textAlign: "left",
-          width: "100%",
-          cursor: "pointer"
-          
-        }}
-        onClick={() => navigate(-1)}
-        >Go Back</p>
+      <p className="item-page-go-back" onClick={() => navigate(-1)}>Go Back</p>
 
         <PurchaseItem 
           image={zx9speaker}

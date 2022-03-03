@@ -21,17 +21,7 @@ export default function YX1WirelessEarphones() {
     <section className="home">
       <div className="home-content">
 
-      <p style={{
-          opacity: "0.4",
-          marginBottom: "2rem",
-          fontSize: "1.4rem",
-          textAlign: "left",
-          width: "100%",
-          cursor: "pointer"
-          
-        }}
-        onClick={() => navigate(-1)}
-        >Go Back</p>
+      <p className="item-page-go-back" onClick={() => navigate(-1)}>Go Back</p>
 
         <PurchaseItem 
           image={yx1wirelessearphones}

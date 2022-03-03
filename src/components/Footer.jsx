@@ -31,7 +31,7 @@ export default function Footer() {
           </div>
         </div>
       
-        <p style={{paddingBottom:"2rem"}}>Copyright 2021. All Rights Reserved.<br/>Mockup from <a href="https://www.frontendmentor.io/challenges" target="_blank" rel="noreferrer">frontendmentors</a></p>
+        <p style={{paddingBottom:"2rem"}}>Copyright 2021. All Rights Reserved.<br/>Mockup from <a href="https://www.frontendmentor.io/challenges/audiophile-ecommerce-website-C8cuSd_wx" target="_blank" rel="noreferrer">frontendmentors</a></p>
         
       </div>
     </footer>

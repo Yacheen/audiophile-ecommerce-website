@@ -134,7 +134,9 @@
 }
 //dekstop/laptop
 @media screen and(min-width: 1050px) {
+    
     .purchase-item {
+        max-width: 82.5%;
         img {
             max-width: 40%;
             margin-right: 2rem;
@@ -142,6 +144,24 @@
         .product-details {
             min-height: 0;
             flex-direction: row;
+            justify-content: space-between;
+            
+            .product-details-description {
+                max-width: 40%;
+                margin: 0 0 0 auto;
+            }
+        }
+        .product-features-and-inbox {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            .product-features {
+                max-width: 50%;
+            }
+            .product-in-the-box {
+                margin-right: 12rem;
+            }
         }
     }
 }
+
