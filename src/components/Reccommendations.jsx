@@ -12,31 +12,34 @@ export default function Reccommendations({
     <section className="reccommendations">
       <h5 style={{
         textAlign: "center",
-        marginBottom: "4rem"
+        marginBottom: "6rem"
       }}>YOU MAY ALSO LIKE</h5>
-      <div className="reccommendation">
-        <div className="image-background">
-          <img src={image1} alt=""></img>=
+      <div className="reccommendations-content">
+        <div className="reccommendation">
+          <div className="image-background">
+            <img src={image1} alt=""></img>
+          </div>
+
+          <h4>{name1}</h4>
+          <button className="brown-button">SEE PRODUCT</button>
         </div>
 
-        <h4>{name1}</h4>
-        <button className="brown-button">SEE PRODUCT</button>
-      </div>
-
-      <div className="reccommendation">
-        <div className="image-background">
-          <img src={image2} alt=""></img>
+        <div className="reccommendation">
+          <div className="image-background">
+            <img src={image2} alt=""></img>
+          </div>
+          <h4>{name2}</h4>
+          <button className="brown-button">SEE PRODUCT</button>
         </div>
-        <h4>{name2}</h4>
-        <button className="brown-button">SEE PRODUCT</button>
-      </div>
 
-      <div className="reccommendation">
-        <div className="image-background">
-          <img src={image3} alt=""></img>
+        <div className="reccommendation">
+          <div className="image-background">
+            <img src={image3} alt=""></img>
+          </div>
+          <h4>{name3}</h4>
+          <button className="brown-button">SEE PRODUCT</button>
         </div>
-        <h4>{name3}</h4>
-        <button className="brown-button">SEE PRODUCT</button>
+
       </div>
     </section>
   )

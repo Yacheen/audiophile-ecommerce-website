@@ -19,6 +19,7 @@ export default function speakers() {
             name={"ZX9 Speaker"}
             picture={zx9speaker}
             link={"/speakers/1"}
+            isReversed={false}
           />
           <Item
             description={"ZX7 speakerStream high quality sound wirelessly with minimal loss. The ZX7 bookshelf speaker uses high-end audiophile components that represents the top of the line powered speakers for home or studio use."}
@@ -26,6 +27,7 @@ export default function speakers() {
             name={"ZX7 Speaker"}
             picture={zx7speaker}
             link={"/speakers/2"}
+            isReversed={true}
           />
         </div>
         <Products />

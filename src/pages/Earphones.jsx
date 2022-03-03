@@ -18,6 +18,7 @@ export default function Earphones() {
               name={"YX1 wireless earphones"}
               picture={yx1earphones}
               link={"/earphones/1"}
+              isReversed={false}
         />
 
         </div>

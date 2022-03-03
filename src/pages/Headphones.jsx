@@ -22,6 +22,7 @@ export default function Headphones() {
               name={"XX99 Mark II Headphones"}
               picture={x99mark2headphones}
               link={"/headphones/1"}
+              isReversed={false}
             />
 
             {/*x99mark1*/}
@@ -31,6 +32,7 @@ export default function Headphones() {
               name={"XX99 Mark I Headphones"}
               picture={x99mark1headphones}
               link={"/headphones/2"}
+              isReversed={true}
             />
 
             {/*x59*/}
@@ -40,6 +42,7 @@ export default function Headphones() {
               name={"XX59 Headphones"}
               picture={x59headphones}
               link={"/headphones/3"}
+              isReverse={false}
             />
           </div>
           <Products />

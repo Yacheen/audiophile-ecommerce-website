@@ -25,7 +25,7 @@ export default function XX99Mark2Headphones() {
       <div className="home-content">
 
         <p style={{
-          opacity: "0.4",
+          opacity: "0.6",
           marginBottom: "2rem",
           fontSize: "1.4rem",
           textAlign: "left",

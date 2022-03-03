@@ -4,7 +4,7 @@ import aboutGuyMobile from "../assets/shared/mobile/image-best-gear.jpg";
 import aboutGuyTablet from "../assets/shared/tablet/image-best-gear.jpg";
 import aboutGuyDesktop from "../assets/shared/desktop/image-best-gear.jpg";
 export default function AboutAudiophile() {
-  const isDesktop = useMediaQuery('(min-width: 1070px)');   
+  const isDesktop = useMediaQuery('(min-width: 1050px)');   
   return ( 
     <div className="about-audiophile">
       {

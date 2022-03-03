@@ -10,10 +10,12 @@ export default function Footer() {
       
         <div className="footer-buttons">
           <h5>audiophile</h5>
-          <a href="/"><p>HOME</p></a>
-          <a href="/headphones"><p>HEADPHONES</p></a>
-          <a href="/speakers"><p>SPEAKERS</p></a>
-          <a href="/earphones"><p>EARPHONES</p></a>
+          <div className="footer-button-links">
+            <a href="/"><p>HOME</p></a>
+            <a href="/headphones"><p>HEADPHONES</p></a>
+            <a href="/speakers"><p>SPEAKERS</p></a>
+            <a href="/earphones"><p>EARPHONES</p></a>
+          </div>
         </div>
 
         <div className="footer-description">
