@@ -2,13 +2,13 @@
 .success-container {
     overflow-y: auto;
     .cart {
-        max-height: 50rem;
+        max-height: 46rem;
         
         top: 50%;
         overflow-y: auto;   
     
         .cart-content {
-            max-height: 50rem;
+            max-height: 46rem;
             
             overflow-y: auto;    
             .checkmark-circle {
@@ -17,23 +17,23 @@
                 align-items: center;
                 border-radius: 50%;
                 color: white;
-                width: 6.4rem;
-                height: 6.4rem;
+                width: 3.8rem;
+                height: 3.8rem;
                 background: $brown;
-                margin-bottom: 2rem;
+                margin-bottom: 1.2rem;
                 .checkmark-icon {
-                    font-size: 3.6rem;
+                    font-size: 2.6rem;
                 }
             }
 
             h5 {
-                margin-bottom: 2rem;
+                margin-bottom: 1.2rem;
             }
             .success-email-confirmation {
                 font-size: 1.4rem;
                 max-width: 90%;
                 opacity: 0.7;
-                margin-bottom: 4rem;
+                margin-bottom: 1.2rem;
             }
             .success-products {
                 background: $darker-white;
