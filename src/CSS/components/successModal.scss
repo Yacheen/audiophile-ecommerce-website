@@ -3,10 +3,11 @@
     .cart {
         max-height: 50rem;
         top: 50%;
+        overflow-y: auto;   
     
         .cart-content {
-            max-height: 60rem;
-    
+            max-height: 50rem;
+            overflow-y: auto;    
             .checkmark-circle {
                 display: flex;
                 justify-content: center;
