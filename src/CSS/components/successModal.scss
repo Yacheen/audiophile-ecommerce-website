@@ -1,12 +1,15 @@
 @import "../variables.scss";
 .success-container {
+    overflow-y: auto;
     .cart {
         max-height: 50rem;
+        
         top: 50%;
         overflow-y: auto;   
     
         .cart-content {
             max-height: 50rem;
+            
             overflow-y: auto;    
             .checkmark-circle {
                 display: flex;
