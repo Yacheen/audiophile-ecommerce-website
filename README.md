@@ -19,7 +19,7 @@ Users should be able to:
 
 ![screenshot](./src/assets/randomImages/preview.jpg)
 
-## What I leaned
+## What I learned
  ### This project has greatly strengthened my html/css akills,
  ### but more importantly, my functional/react skills dealing with local host/global state management. 
 
